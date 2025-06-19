@@ -1,0 +1,54 @@
+post:
+  tags:
+    - Inventory
+  description: Create a new inventory item
+  parameters:
+    - in: body
+      name: body
+      required: true
+      schema:
+        type: object
+        required:
+          - sku
+          - date
+          - sku_description
+          - product_category
+          - location
+          - units
+          - cost_per_unit
+        properties:
+          sku:
+            type: string
+          date:
+            type: string
+            format: date
+          sku_description:
+            type: string
+          product_category:
+            type: string
+          location:
+            type: string
+          units:
+            type: integer
+          cost_per_unit:
+            type: number
+  responses:
+    201:
+      description: Item created
+      schema:
+        type: object
+        properties:
+          inserted_id:
+            type: string
+
+get:
+  tags:
+    - Inventory
+  description: Get all inventory items
+  responses:
+    200:
+      description: List of inventory items
+      schema:
+        type: array
+        items:
+          type: object

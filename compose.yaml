@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ft_flask-server
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - .env

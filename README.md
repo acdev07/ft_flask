@@ -85,7 +85,7 @@ project/
 ├── table2_logic.py
 ├── other_scripts.py
 ├── utils.py
-├── main.py
+├── app.py
 ├── .gitignore
 ├── readme.md
 └── .env
